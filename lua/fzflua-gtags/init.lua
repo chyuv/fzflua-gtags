@@ -18,7 +18,7 @@ local function fzflua_preview(title, prompt, items)
 		-- on select
 		actions = {
 			["default"] = function(selected)
-				local file, line = selected[1]:match("^(.-):(%d+)$")
+				local file, line = selected[1]:match("^(.-):(%d+):")
 				if file and line then
 					vim.cmd("edit " .. vim.fn.fnameescape(file))
 					vim.cmd("normal! " .. line .. "zz")
