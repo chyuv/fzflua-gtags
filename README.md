@@ -1,9 +1,10 @@
-# fzflua-gtags
+# 🏷️fzflua-gtags
 
 > using [gtags](https://www.gnu.org/software/global/) under [fzf-lua](https://github.com/ibhagwan/fzf-lua/) !
 
 ## Setup
 
+If no pack manager:
 ~~~lua
 require("fzflua-gtags").setup()
 ~~~
@@ -18,7 +19,11 @@ vim.keymap.set("n", "<leader>Gr", "<CMD>GtagsFindRefs<CR>", { desc = "gtags find
 
 ## Usage
 
-- update: `:GtagsUpdate` update tag files incrementally. (os cmd: `global -u`)
-- find definition: `:GtagsFindDefs` search word under cursor, or `:GtagsFindDefs <word>` with specified word. (os cmd: `global -x <word>` )
-- find references: `:GtagsFindRefs` search word under cursor, or `:GtagsFindDefs <word>` with specified word. (os cmd: `global -xd <word>` )
+- `:GtagsUpdate` Update tag files incrementally. (os cmd: `global -u`)
+
+- `:GtagsFindDefs` Find definition with word under cursor. (os cmd: `global -x <cword>`)
+- `:GtagsFindRefs` Find references with word under cursor. (os cmd: `global -xd <cword>`)
+
+- `:GtagsFindDefs <word>` Find definition with specified word.
+- `:GtagsFindDefs <word>` Find references with specified word.
 
